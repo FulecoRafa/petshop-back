@@ -1,0 +1,46 @@
+POST http://localhost:9000/orders/
+Content-Type: application/json
+
+{
+  "customer": "5f0cf2f93a5ae76d8c48bf43",
+  "items": [
+    {
+      "quantity": 4,
+      "price": 79.99,
+      "product": "5f0ce9ab89059966016d16f5"
+    }
+  ]
+}
+
+###
+
+POST http://localhost:9000/orders/
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "quantity": 3,
+      "price": 79.99,
+      "product": "5f0ce9ab89059966016d16f5"
+    }
+  ]
+}
+
+###
+
+GET http://localhost:9000/orders
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU0NDMxNDcsImV4cCI6MTU5NTQ0NDk0N30.juYSwgZmqX6UEcCnqiTUi8mF0M6qKEs7PB-8EbiAYk4
+refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU0NDMxMTl9.WLJ-sBK-NUn5TA99QV5JUXOotRnWCfp5sCTSjWJBpJU
+Content-Type: application/json
+
+{
+  "from": "2020-07-20",
+  "to": "2020-07-23"
+}
+
+###
+
+PUT http://localhost:9000/orders/5f18821778c3cd588810330c/done
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU0NDgyNjgsImV4cCI6MTU5NTQ1MDA2OH0.Og36LlYlllSQDsSv8E4u9RZE4q3CVnKsqtoeB3u9VBE
+refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU0NDgyNjh9.avDK_QeGd8Y3Qs7uStt7qQlBRYgW3TRlUPSvkJupTng

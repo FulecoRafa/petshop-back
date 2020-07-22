@@ -1,0 +1,3 @@
+The CAP theorem is a theorem that states that you can only have two out of this three garantees: consistency, availability and partition tolerance
+This means that, considering partition tolerance as given, since it is very important, one can only have a consistent database, which garantees that the information there is completly reliable, or a available database, which recieves all queries and process all of them.
+Mongo doesn't implement availability.

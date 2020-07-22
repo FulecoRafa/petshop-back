@@ -1,0 +1,24 @@
+POST http://localhost:9000/apointments
+Content-Type: application/json
+
+{
+  "client": "5f0cf2f93a5ae76d8c48bf43",
+  "service": "5f14956135d76c25c7e55940",
+  "pet": "5f16e7067c0e5525602dde87",
+  "hour": "10",
+  "date": "2020-07-21"
+}
+
+###
+
+POST http://localhost:9000/apointments/times
+Content-Type: application/json
+
+{
+  "from": "2020-07-10",
+  "to": "2020-07-30"
+}
+
+###
+
+GET http://localhost:9000/apointments/5f16f517928edd32036400c6

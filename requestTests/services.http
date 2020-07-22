@@ -1,0 +1,57 @@
+POST http://localhost:9000/services
+Content-Type: application/json
+
+{
+  "title": "Banho relaxante",
+  "slug": "banho-relaxante",
+  "description": "Banho quente demorado",
+  "partner": "José Braga Silva",
+  "price": 50.0,
+  "hours": [9, 11, 15, 17]
+}
+
+###
+
+POST http://localhost:9000/services
+Content-Type: application/json
+
+{
+  "title": "Ração pra Gato Whiskas Deluxe",
+  "description": "Ração feita com as malhores carnes do mercado para seu amiguinho",
+  "tags": ["Gato", "Comida", "Ração", "Bichano", "Whiskas"]
+}
+
+###
+
+GET http://localhost:9000/services
+
+###
+
+GET http://localhost:9000/services/slug/tosa-radical
+
+###
+
+GET http://localhost:9000/services/id/5f14943962ce132443898f32
+
+###
+
+PUT http://localhost:9000/services/5f14943962ce132443898f32
+Content-Type: application/json
+
+{
+  "title": "Tosa Radical"
+}
+
+###
+
+DELETE http://localhost:9000/services/5f14943962ce132443898f32
+
+###
+
+GET http://localhost:9000/services/partner
+Content-Type: application/json
+
+{
+  "name": "braga",
+  "hours": [14, 10]
+}

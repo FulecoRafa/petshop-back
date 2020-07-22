@@ -1,0 +1,5 @@
+There are four big NoSQL types:
+1- Key-Value Store: It's the simplest one. You can store a key to which you refer to get the value. This can be a number, string or even another set of key values. Similar to a JS Object
+2- Column oriented database: It stores lots of tables, each one with a different data column and an index for reference. It makes the lookup for the data very quick, but it has to store the index for every data type.
+3- Document Store: It's similar to the key-value store, but up in complexity. Instead of storing each key and each value, it can store a mulitude of keys and values called a Document, which resembles day-to-day normal documents. It is very complex and allows for very fast calculations and lookups.
+4- Graph databases: It's a type of storing used when data has lots of interconnections between themselves, making a graph. This allows for traveling between those interconnections easily in the database.

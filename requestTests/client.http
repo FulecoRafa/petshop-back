@@ -1,0 +1,36 @@
+POST http://localhost:9000/client
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "email": "admin@gmail.com",
+  "passwd": "admin",
+  "permission": "admin",
+  "address": "Rua das Rosas 255",
+  "phone": "(79)9 8844-3885"
+}
+
+###
+
+POST http://localhost:9000/client/login
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "passwd": "admin"
+}
+
+###
+
+GET http://localhost:9000/client/id/5f17233c31a3d650172c8f06
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE3MjMzYzMxYTNkNjUwMTcyYzhmMDYiLCJuYW1lIjoiUmFmYWVsIiwiZW1haWwiOiJmdWxlY28ucmEucGhhQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCQ4OG5CWTEzWE14bFI3MUdMOEtBUjBlZ2dSRDBaZHlqcXhCRG5SNHNwTy43czhIWkxTV3ljcSIsInBlcm1pc3Npb24iOiJ1c2VyIiwiYWRkcmVzcyI6IlJ1YSBkYXMgUm9zYXMgMjU1IiwicGhvbmUiOiIoNzkpOSA4ODQ0LTM4ODUiLCJfX3YiOjAsImlhdCI6MTU5NTQ0MTkxNSwiZXhwIjoxNTk1NDQzNzE1fQ.4tMbyPMCFK_pMDJImyITrwS7UXblPHd4gerUwzKfrAA
+refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE3MjMzYzMxYTNkNjUwMTcyYzhmMDYiLCJuYW1lIjoiUmFmYWVsIiwiZW1haWwiOiJmdWxlY28ucmEucGhhQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCQ4OG5CWTEzWE14bFI3MUdMOEtBUjBlZ2dSRDBaZHlqcXhCRG5SNHNwTy43czhIWkxTV3ljcSIsInBlcm1pc3Npb24iOiJ1c2VyIiwiYWRkcmVzcyI6IlJ1YSBkYXMgUm9zYXMgMjU1IiwicGhvbmUiOiIoNzkpOSA4ODQ0LTM4ODUiLCJfX3YiOjAsImlhdCI6MTU5NTQ0MTkxNX0.hfxtYX-v3uA_JVYGEeijJI6vyrvRGfLLYH6UugPMEtQ
+
+###
+
+POST http://localhost:9000/client/logout
+Content-Type: application/json
+
+{
+  "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE3MjMzYzMxYTNkNjUwMTcyYzhmMDYiLCJuYW1lIjoiUmFmYWVsIiwiZW1haWwiOiJmdWxlY28ucmEucGhhQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCQ4OG5CWTEzWE14bFI3MUdMOEtBUjBlZ2dSRDBaZHlqcXhCRG5SNHNwTy43czhIWkxTV3ljcSIsInBlcm1pc3Npb24iOiJ1c2VyIiwiYWRkcmVzcyI6IlJ1YSBkYXMgUm9zYXMgMjU1IiwicGhvbmUiOiIoNzkpOSA4ODQ0LTM4ODUiLCJfX3YiOjAsImlhdCI6MTU5NTQzODM2Mn0.5r2ODqP4SUcPvi5R9CprPNuBgheJsAw62J9YNjmsbE8"
+}

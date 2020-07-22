@@ -1,0 +1,20 @@
+{
+  "name": "petshop-backend",
+  "version": "1.0.0",
+  "author": "Rafael Tavares Oliveira - 11219071",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js --ignore '/node_modules'"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "global": "^4.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.24",
+    "node": "^14.5.0",
+    "require-dir": "^1.2.0"
+  }
+}
