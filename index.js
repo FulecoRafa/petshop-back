@@ -2,6 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+
 require('dotenv').config();
 
 // Connecting to DB
@@ -14,6 +15,8 @@ requireDir('./src/models');
 // Setting app up
 const app = express();
 app.use(express.json());
+
+app.use(require('cors')());
 
 // Routing
 app.use('/products', require('./src/routes/product'));

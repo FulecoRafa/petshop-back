@@ -2,7 +2,6 @@ POST http://localhost:9000/client
 Content-Type: application/json
 
 {
-  "name": "admin",
   "email": "admin@gmail.com",
   "passwd": "admin",
   "permission": "admin",
@@ -16,7 +15,7 @@ POST http://localhost:9000/client/login
 Content-Type: application/json
 
 {
-  "name": "admin",
+  "email": "admin@gmail.com",
   "passwd": "admin"
 }
 

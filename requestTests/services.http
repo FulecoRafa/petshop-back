@@ -1,13 +1,16 @@
 POST http://localhost:9000/services
 Content-Type: application/json
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU2ODQ4MjIsImV4cCI6MTU5NTY4NjYyMn0.SYI6ukwBaMnMu2qDFKbyHvNpCU9gg1N5RUffZvJbbGM
+refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU2ODI2MjN9.qlRHVsuYBPaX632N8y_XTYJ_Hajfhm4wuGpxiqpJcIE
 
 {
-  "title": "Banho relaxante",
-  "slug": "banho-relaxante",
-  "description": "Banho quente demorado",
+  "title": "Tosa Radical",
+  "slug": "tosa-radical",
+  "description": "Tosa rápida",
   "partner": "José Braga Silva",
   "price": 50.0,
-  "hours": [9, 11, 15, 17]
+  "hours": [9, 11, 15, 17],
+  "image": "hair.png"
 }
 
 ###
@@ -27,7 +30,14 @@ GET http://localhost:9000/services
 
 ###
 
-GET http://localhost:9000/services/slug/tosa-radical
+POST http://localhost:9000/services/search
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU2OTM4MjgsImV4cCI6MTU5NTY5NTYyOH0.c2R30BNYf6-J3mnGkWuQMMHdVD08to2eeeGGuK3XEcA
+refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU2ODI2MjN9.qlRHVsuYBPaX632N8y_XTYJ_Hajfhm4wuGpxiqpJcIE
+Content-Type: application/json
+
+{
+  "prompt": "tosa"
+}
 
 ###
 

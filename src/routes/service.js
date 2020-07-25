@@ -4,7 +4,7 @@ const controller = require('../controllers/service');
 const middleware = require('../middleware');
 
 routes.get('/', middleware.authToken, controller.get);
-routes.get('/slug/:slug', middleware.authToken, controller.getBySlug);
+routes.post('/search', middleware.authToken, controller.getBySlug);
 routes.get('/id/:id', middleware.authToken, controller.getById);
 routes.get('/partner', middleware.authToken, controller.getPartnerHours);
 routes.post('/', middleware.authToken, middleware.adminShield, controller.create);

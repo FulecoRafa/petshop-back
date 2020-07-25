@@ -12,10 +12,10 @@ module.exports = {
       });
   },
   getBySlug(req, res, next){
-    Product.findOne({
+    Product.find({
     $or:[
-      {slug: {$regex: req.body.slug, $options: 'gi'}},
-      {tags: {$regex: req.body.tag, $options: 'gi'}}
+      {slug: {$regex: req.body.prompt, $options: 'gi'}},
+      {tags: {$regex: req.body.prompt, $options: 'gi'}}
     ],
     active: true
   },

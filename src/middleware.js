@@ -65,7 +65,7 @@ module.exports = {
   },
   // Checks password
   auth(req, res, next){
-    Client.findOne({name: req.body.name})
+    Client.findOne({email: req.body.email})
       .then(user=>{
         bcrypt.compare(req.body.passwd, user.passwd, function(err, response) {
           if (err) res.status(500).send("There was an internal error in the server");

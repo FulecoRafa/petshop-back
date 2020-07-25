@@ -4,7 +4,7 @@ const Service = mongoose.model('Service');
 
 module.exports = {
   get(req, res, next){
-    Service.find({}, 'title description partner price hours')
+    Service.find({}, 'title description partner price hours image')
       .then(data=>{
         res.status(200).send(data);
       })
@@ -13,12 +13,18 @@ module.exports = {
       });
   },
   getBySlug(req, res, next){
-    Service.findOne({slug: req.params.slug}, '-_id title slug description price partner hours')
+    console.log(req.body.prompt);
+    Service.find({
+      $or:[
+        {slug: {$regex: req.body.prompt, $options: 'gi'}},
+        {title: {$regex: req.body.prompt, $options: 'gi'}}
+      ]
+    }, '-_id title slug description price partner hours image')
       .then(data=>{
         res.status(200).send(data);
       })
       .catch(error=>{
-        res.status(400).send(error);
+        res.status(400).send("No services found");
       });
   },
   getById(req, res, next){

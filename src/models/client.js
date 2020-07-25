@@ -4,7 +4,7 @@ const schema = new mongoose.Schema({
   name:{
     type: String,
     trim: true,
-    unique: true,
+    unique: [true, "Username is unique"],
     required: [true, "Username is required"]
   },
   email:{

@@ -1,12 +1,14 @@
 POST http://localhost:9000/products
 Content-Type: application/json
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU2ODI2MjMsImV4cCI6MTU5NTY4NDQyM30.Y8GEqWnr7hto1fdffxtJSNw1jot0Ax5GxI1SMq2MQ8g
+refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjE4ODc3MDg1ZmE2MzVkMDRmOTYyMWYiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3ZCI6IiQyYiQxMCRRL1Vvai9nbWFxb3lZSXRxV3lvajB1SzI1Tm9XNDJwdjF3MDQ2b3hXcEJXQ1YwZjJOcnd2MiIsInBlcm1pc3Npb24iOiJhZG1pbiIsImFkZHJlc3MiOiJSdWEgZGFzIFJvc2FzIDI1NSIsInBob25lIjoiKDc5KTkgODg0NC0zODg1IiwiX192IjowLCJpYXQiOjE1OTU2ODI2MjN9.qlRHVsuYBPaX632N8y_XTYJ_Hajfhm4wuGpxiqpJcIE
 
 {
-  "title": "Ração pra Gato Whiskas Deluxe",
-  "slug": "racao-wiskas-deluxe-gato",
+  "title": "Ração pra Cão Whiskas Deluxe",
+  "slug": "racao-wiskas-deluxe-cao",
   "description": "Ração feita com as malhores carnes do mercado para seu amiguinho",
   "price": 79.99,
-  "tags": ["Gato", "Comida", "Ração", "Bichano", "Whiskas"]
+  "tags": ["Cão", "Comida", "Ração", "Cachorro", "Whiskas"]
 }
 
 ###
