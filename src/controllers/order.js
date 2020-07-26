@@ -18,12 +18,25 @@ module.exports = {
         res.status(400).send(error)
       })
   },
+  getByUser(req, res, next){
+    Order.findOne({customer: req.params.id})
+      .populate('customer', 'name -_id')
+      .populate('items.product', 'title price -_id')
+      .then(data=>{
+        if(data.length < 1) return res.status(400).send("No cart found for this user");
+        res.status(200).send(data)
+      })
+      .catch(error=>{
+        res.status(400).send("Information for cart finding incorrect");
+      })
+  },
   create(req, res, next){
     Order.create(req.body)
       .then(data=>{
         res.status(201).send("Succesfully ordered");
       })
       .catch(error=>{
+        console.log(error);
         res.status(400).send(error);
       })
   },

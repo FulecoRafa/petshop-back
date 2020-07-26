@@ -4,7 +4,7 @@ const Pet = mongoose.model('Pet');
 module.exports = {
   getByClient(req, res, next){
     console.log(req.user._id)
-    Pet.find({client: req.user._id}, '-_id -__v')
+    Pet.find({client: req.user._id}, '_id -__v')
       .then(data=>{
         if(data.length < 1) return res.status(400).send("Could not find pets related to this client.");
         res.status(200).send(data);
