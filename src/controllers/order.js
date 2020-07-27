@@ -19,9 +19,9 @@ module.exports = {
       })
   },
   getByUser(req, res, next){
-    Order.findOne({customer: req.params.id})
-      .populate('customer', 'name -_id')
-      .populate('items.product', 'title price -_id')
+    Order.findOne({customer: req.params.id, status: {$ne: 'done'}})
+      .populate('customer', 'name')
+      .populate('items.product', 'title price')
       .then(data=>{
         if(data.length < 1) return res.status(400).send("No cart found for this user");
         res.status(200).send(data)
@@ -75,6 +75,17 @@ module.exports = {
       .catch(err=>{
         console.log(err);
         res.status(400).send("There was an error adding item");
+      });
+  },
+  save(req, res, next){
+    console.info(req.body);
+    Order.findByIdAndUpdate(req.params.id, {items: req.body, status:'created'})
+      .then(data=>{
+        res.status(200).send("Cart saved");
+      })
+      .catch(err=>{
+        console.error(err);
+        res.status(400).send("Problem saving cart information");
       });
   },
   setStatus(req, res, next){
